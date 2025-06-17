@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>rede6F</title>
+	<script>
+		nome = prompt("Qual o seu nome?: ")
+	</script>
+	<style>
+		body{
+			background-color: rgb(189, 187, 187);
+		}
+		#pedaco1{
+			width: 39em;
+			float: left;
+			margin-left: 3.5%;
+		}
+		#pedaco2{
+			width: 39em;
+			height: 39em;
+			float: left;
+		}
+		#login{
+			width: 50%;
+			height: 20%;
+			border: 2px solid black;
+			border-radius: 20px;
+			margin-left: 15%;
+			margin-top: 40%;
+			background-color: white;
+		}
+		#name_rede{
+			color: blue;
+			font-size: 80px;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			padding-top: 33%;
+			padding-left: 15%;
+			padding-bottom: 0px;
+		}
+		#subtitle{
+			font-size: 25px;
+			font-family: sans-serif;
+			width: 300px;
+			padding-left:15%;
+		}
+		.button{
+			margin-left: 40%;
+			text-decoration: none;
+			background: rgb(144, 144, 246);
+			padding: 1%;
+			color:white;
+			font-size: 17px;
+			font-family: sans-serif;
+		}
+		.text{
+			margin-left: 20%;
+			margin-top: 10%;
+			height: 3em;
+		}
+
+		#mensagem{
+			border: 2 px solid black;
+		}
+		.clean{
+			clear: both;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="pedaco1">
+		<span id="mensagem">
+			<div id="name_rede">Rede-6F</div>
+			<div id="subtitle">Venha fazer parte da melhor rede social</div>
+		</span>
+	</div>
+	<div id="pedaco2">  
+		<div id="login">
+			<input type="text" class="text" placeholder="Email" value=""><br>
+			<a href="home.html" class="button" onclick="checa()">Entrar</a>
+		</div>
+	</div>
+</body>
+</html>
