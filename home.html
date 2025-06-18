@@ -53,6 +53,8 @@
             clear: both;
         }
         #footer{
+            width: 100%;
+            height: 40px;
             background-color: blue;
             position: fixed;
             bottom: 0;
@@ -60,13 +62,25 @@
             border-radius: 3px;
             padding: 10px;
             color: white;
+            line-height: 40px;
+            font-family: sans-serif;
+        }
+        .inputs{
+            float: right;
+        }
+        #irperfil{
+            color: white;
+            text-decoration: none;
+        }
+        #irperfil:hover{
+            color: aqua;
         }
     </style>
 </head>
 <body>
     <div id="head">
         <span id="seisf">Rede-6F </span>
-        <span class="item-head"><input type="text"><input type="button" value="Pesquisar"></span>
+        <span class="item-head"><input class="inputs"  type="button" value="Pesquisar"><input class="inputs" type="text"></span>
     </div>
     <div class="clear">
     <hr>
@@ -141,14 +155,24 @@
                 exemplo <br>
             <em>- Philipe Sancho</em>
         </span>
-            <span class="conteudo">
+            <span style="margin-bottom: 80px;" class="conteudo">
                 exemplo <br>
             <em>- Philipe Sancho</em>
         </span>
     </div>
     <hr class="clear">
+    
+
     <div id="footer">
-        Feito por: Philipe Sancho
+        <span>
+            Feito por: Philipe Sancho
+        </span>
+        <span style="
+        float:right;
+        margin-right:20px;
+        ">
+            <a id="irperfil" href="profile.html">Meu Perfil</a>
+        </span>
     </div>
 </body>
 </html>
