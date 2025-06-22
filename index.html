@@ -7,6 +7,7 @@
 	<style>
 		body{
 			background-color: rgb(255, 255, 255);
+			font-family: sans-serif;
 		}
 		#pedaco1{
 			width: 25em;
@@ -20,7 +21,7 @@
 		}
 		#login{
 			width: 50%;
-			height: 20%;
+			height: 25%;
 			border: 2px solid black;
 			border-radius: 20px;
 			margin: 200px auto;
@@ -28,17 +29,17 @@
 		}
 		#name_rede{
 			color: blue;
-			font-size: 80px;
+			font-size: 60px;
 			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-			padding-top: 33%;
-			padding-left: 15%;
+			padding-top: 50%;
+			padding-left: 30%;
 			padding-bottom: 0px;
 		}
 		#subtitle{
 			font-size: 25px;
 			font-family: sans-serif;
 			width: 300px;
-			padding-left:15%;
+			padding-left:30%;
 			color: blue;
 		}
 		.button{
@@ -75,15 +76,20 @@
     		'yasmimalves231010@gmail.com',
     		'carminatihenrique10@gmail.com',
     		'laiza_fernanda18@hotmail.com',
+			'dmdortopedica@gmail.com',
 		]
 		function verificaEmail(){
 			var email = document.getElementById('text').value
 			if (email === ''){
-				alert('coloque um email válido')
+				document.getElementById('text').value = '';
+				document.getElementById('text').style.background = 'red';
+				document.getElementById('senha-confirmacao').textContent = 'Email não permitido.'
 			} if ((emails.indexOf(email)) != -1){
 				window.location.href = 'home.html';
 			} else{
+				document.getElementById('text').value = '';
 				document.getElementById('text').style.background = 'red';
+				document.getElementById('senha-confirmacao').textContent = 'Email não permitido.'
 			}
 		}
 	</script>
@@ -100,6 +106,9 @@
 			<input type="text" id="text" placeholder="Email" value="philipesancho@gmail.com"><br>
 			<a class="button" onclick="verificaEmail()">Entrar</a> <br>
             <h1 id="mensagem-senha"></h1>
+			<h1 id="senha-confirmacao" style="line-height: 100%;font-size:16px;text-align: center;"></h1>
+				
+			</div>
 		</div>
 	</div>
 </body>
