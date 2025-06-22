@@ -50,7 +50,7 @@
 			font-size: 17px;
 			font-family: sans-serif;
 		}
-		.text{
+		#text{
 			margin-left: 20%;
 			margin-top: 10%;
 			height: 3em;
@@ -62,8 +62,31 @@
 		.clean{
 			clear: both;
 		}
-
+        #mensagem-senha{
+            margin-left: 20%;
+        }
 	</style>
+	<script>
+		var emails = [
+			'philipesperandio@gmail.com',
+			'davima433@gmail.com',
+			'sophyaluacolodetti@gmail.com',
+    		'ericknicchio@gmail.com',
+    		'yasmimalves231010@gmail.com',
+    		'carminatihenrique10@gmail.com',
+    		'laiza_fernanda18@hotmail.com',
+		]
+		function verificaEmail(){
+			var email = document.getElementById('text').value
+			if (email === ''){
+				alert('coloque um email válido')
+			} if ((emails.indexOf(email)) != -1){
+				window.location.href = 'home.html';
+			} else{
+				document.getElementById('text').style.background = 'red';
+			}
+		}
+	</script>
 </head>
 <body>
 	<div id="pedaco1">
@@ -74,8 +97,9 @@
 	</div>
 	<div id="pedaco2">  
 		<div id="login">
-			<input type="text" class="text" placeholder="Email" value=""><br>
-			<a href="home.html" class="button" onclick="checa()">Entrar</a>
+			<input type="text" id="text" placeholder="Email" value="philipesancho@gmail.com"><br>
+			<a class="button" onclick="verificaEmail()">Entrar</a> <br>
+            <h1 id="mensagem-senha"></h1>
 		</div>
 	</div>
 </body>
