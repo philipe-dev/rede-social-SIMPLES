@@ -3,70 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>rede6F</title>
-	<style>
-		body{
-			background-color: rgb(255, 255, 255);
-			font-family: sans-serif;
-		}
-		#pedaco1{
-			width: 25em;
-			float: left;
-
-		}
-		#pedaco2{
-			width: 30em;
-			height: 38em;
-			float: right;
-		}
-		#login{
-			width: 50%;
-			height: 25%;
-			border: 2px solid black;
-			border-radius: 20px;
-			margin: 200px auto;
-			background-color: rgb(255, 255, 255);
-		}
-		#name_rede{
-			color: blue;
-			font-size: 60px;
-			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-			padding-top: 50%;
-			padding-left: 30%;
-			padding-bottom: 0px;
-		}
-		#subtitle{
-			font-size: 25px;
-			font-family: sans-serif;
-			width: 300px;
-			padding-left:30%;
-			color: blue;
-		}
-		.button{
-			margin-left: 40%;
-			text-decoration: none;
-			background: rgb(0, 0, 0);
-			padding: 1%;
-			color:white;
-			font-size: 17px;
-			font-family: sans-serif;
-		}
-		#text{
-			margin-left: 20%;
-			margin-top: 10%;
-			height: 3em;
-		}
-
-		#mensagem{
-			border: 2 px solid black;
-		}
-		.clean{
-			clear: both;
-		}
-        #mensagem-senha{
-            margin-left: 20%;
-        }
-	</style>
+	<title>Login - HexaFeeds</title>
 	<script>
 		var emails = [
 			'philipesperandio@gmail.com',
@@ -92,23 +29,48 @@
 				document.getElementById('senha-confirmacao').textContent = 'Email não permitido.'
 			}
 		}
+
 	</script>
+	<style>
+		@keyframes hexa{
+			from{
+				text-shadow: 0px;
+			}
+			to{
+				text-shadow: 2px 0px 3px white;
+			}
+		}
+		body{
+			background: black;
+			font-family: sans-serif;
+			color: rgb(255, 255, 255);
+			height: 26em;
+		}
+		#hxfds{
+			font-size: 50px;
+			animation: hexa 1s ease-in-out alternate infinite
+		}
+		#cena-login{
+			margin-top: 230px;
+		}
+		fieldset{
+			border-radius: 10px;
+		}
+		fieldset button{
+			background: grey;
+			color: black
+		}
+	</style>
 </head>
 <body>
-	<div id="pedaco1">
-		<span id="mensagem">
-			<div id="name_rede">Rede-6F</div>
-			<div id="subtitle">Venha fazer parte da melhor rede social</div>
-		</span>
-	</div>
-	<div id="pedaco2">  
-		<div id="login">
-			<input type="text" id="text" placeholder="Email" value="philipesancho@gmail.com"><br>
-			<a class="button" onclick="verificaEmail()">Entrar</a> <br>
-            <h1 id="mensagem-senha"></h1>
-			<h1 id="senha-confirmacao" style="line-height: 100%;font-size:16px;text-align: center;"></h1>
-				
-			</div>
+	<div align="center" id="cena-login">
+		<div id="hxfds">HexaFeeds</div>
+		<div>
+			<fieldset style="width: 300px;">
+				<legend>Login</legend>
+				Email: <input type="text" id="text"placeholder="Digite:">
+				<button onclick="verificaEmail()">Enviar</button>
+			</fieldset>
 		</div>
 	</div>
 </body>
