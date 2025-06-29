@@ -7,6 +7,7 @@
     <style>
         body{
             background-color: black;
+            font-family: sans-serif;
         }
         #head{
             position: fixed;
@@ -32,7 +33,7 @@
         }
         #conteudos{
             width: 100%;
-            margin-top: 90px;
+            margin-top: 20px;
             margin-left: 20px ;
             align-items: center;
         }
@@ -80,8 +81,17 @@
         #saudacao-tela{
             color: white;
         }
+        #postar{
+            height: 30px;
+        }
+        #pensando{
+            margin: 20px;
+        }
+        #button-postar{
+            position: relative;
+            top: -13px;
+        }
     </style>
-    
 </head>
 <body>
     <div id="head">
@@ -90,9 +100,12 @@
     </div>
     <div class="clear">
     </div>
-    <h1></h1>
+    <div id="pensando" style="margin-top: 100px; margin-bottom: 40px;">
+        <h2 style="color:white">No que você esta pensando?</h2>
+        <textarea id="postar"></textarea><button id="button-postar" style="height: 36px;">Enviar</button>
+    </div> <hr>
     <div id="conteudos">
-        <span class="conteudo">
+        <span style="margin-top: 0;" class="conteudo">
         </span>
         <span  class="conteudo">
         </span>
@@ -114,17 +127,5 @@
             <a id="irperfil" href="profile.html">Meu Perfil</a>
         </span>
     </div>
-    <script>
-        window.onload = function() {
-        var nome = localStorage.getItem('nomeUsuario');
-        var saudacao = document.getElementById('saudacao-tela');
-        if (nome && saudacao) {
-            saudacao.textContent = 'Olá, ' + nome + '!';
-        } else if (saudacao) {
-            saudacao.textContent = 'Usuário não identificado.';
-        }
-        }
-    </script>
-
 </body>
 </html>
