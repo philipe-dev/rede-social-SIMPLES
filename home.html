@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HexaFeeds</title>
     <style>
         body{
             background-color: black;
         }
         #head{
+            position: fixed;
+            top:0;
+            left:0;
             height: 40px;
             width: 100%;
             background-color: blue;
-            position: fixed;
-            top: 0;
-            left: 0;
             padding: 10px;
             color: white;
             font-size: 20px;
@@ -69,22 +69,28 @@
             float: right;
         }
         #irperfil{
+            font-size: 20px;
             color: white;
             text-decoration: none;
+            margin-right: 10px;
         }
         #irperfil:hover{
             color: aqua;
         }
+        #saudacao-tela{
+            color: white;
+        }
     </style>
+    
 </head>
 <body>
     <div id="head">
-        <span id="seisf">Rede-6F </span>
+        <span id="seisf">HexaFeeds </span>
         <span class="item-head"><input class="inputs"  type="button" value="Pesquisar"><input class="inputs" type="text"></span>
     </div>
     <div class="clear">
-    <hr>
     </div>
+    <h1></h1>
     <div id="conteudos">
         <span class="conteudo">
         </span>
@@ -99,7 +105,7 @@
 
     <div id="footer">
         <span>
-            Feito por: Philipe Sancho
+            &copy; Philipe Sancho - 2025
         </span>
         <span style="
         float:right;
@@ -108,5 +114,17 @@
             <a id="irperfil" href="profile.html">Meu Perfil</a>
         </span>
     </div>
+    <script>
+        window.onload = function() {
+        var nome = localStorage.getItem('nomeUsuario');
+        var saudacao = document.getElementById('saudacao-tela');
+        if (nome && saudacao) {
+            saudacao.textContent = 'Olá, ' + nome + '!';
+        } else if (saudacao) {
+            saudacao.textContent = 'Usuário não identificado.';
+        }
+        }
+    </script>
+
 </body>
 </html>
