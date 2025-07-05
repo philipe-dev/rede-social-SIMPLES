@@ -5,28 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login - HexaFeeds</title>
 	<script>
-		var emails = [
+		let emails = [
 			'philipesperandio@gmail.com',
 			'davima433@gmail.com',
 			'sophyaluacolodetti@gmail.com',
-    		'ericknicchio@gmail.com',
-    		'yasmimalves231010@gmail.com',
-    		'carminatihenrique10@gmail.com',
-    		'laiza_fernanda18@hotmail.com',
+    			'ericknicchio@gmail.com',
+    			'yasmimalves231010@gmail.com',
+    			'carminatihenrique10@gmail.com',
+    			'laiza_fernanda18@hotmail.com',
 			'dmdortopedica@gmail.com',
 		]
 		function verificaEmail(){
-			var email = document.getElementById('text').value
+			let email = document.getElementById('text').value
 			if (email === ''){
 				document.getElementById('text').value = '';
 				document.getElementById('text').style.background = 'red';
-				document.getElementById('senha-confirmacao').textContent = 'Email não permitido.'
 			} if ((emails.indexOf(email)) != -1){
 				window.location.href = 'home.html';
 			} else{
 				document.getElementById('text').value = '';
+				document.getElementById('password').value = '';
 				document.getElementById('text').style.background = 'red';
-				document.getElementById('senha-confirmacao').textContent = 'Email não permitido.'
+				document.getElementById('password').style.background = 'red';
 			}
 		}
 
@@ -37,21 +37,30 @@
 				text-shadow: 0px;
 			}
 			to{
-				text-shadow: 2px 0px 3px white;
+				text-shadow: 3px 0px 3px white;
 			}
 		}
 		body{
-			background: black;
+			background: rgb(0, 0, 0);
 			font-family: sans-serif;
 			color: rgb(255, 255, 255);
-			height: 26em;
+			height: 90vh;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		#hxfds{
 			font-size: 50px;
-			animation: hexa 1s ease-in-out alternate infinite
+			animation: hexa 1s ease-in-out alternate infinite;
+			margin: 10px;
 		}
 		#cena-login{
-			margin-top: 230px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			
 		}
 		fieldset{
 			border-radius: 10px;
@@ -63,13 +72,20 @@
 	</style>
 </head>
 <body>
-	<div align="center" id="cena-login">
+	<div id="cena-login">
 		<div id="hxfds">HexaFeeds</div>
 		<div>
 			<fieldset style="width: 300px;">
 				<legend>Login</legend>
-				Email: <input type="text" id="text"placeholder="Digite:">
+				<input type="text" id="text"placeholder="Nome:" required><br>
+				<input placeholder="Senha: (Em breve)" type="password" id="password" disabled="disabled"> <br>
 				<button onclick="verificaEmail()">Enviar</button>
+			</fieldset>
+			<fieldset style="width: 300px;">
+				<legend>Cadastro</legend>
+				<input type="text" id="cadtext"placeholder="Nome:" disabled><br>
+				<input placeholder="Senha:" type="password" id="cadpassword" value="" disabled> <br>
+				<button onclick="adicionarCadastro()">Enviar</button>
 			</fieldset>
 		</div>
 	</div>
