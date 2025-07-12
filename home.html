@@ -10,9 +10,9 @@
             font-family: sans-serif;
         }
         #head{
-            position: fixed;
-            top:0;
-            left:0;
+            position:fixed;
+            top:0px;
+            left: 0px;
             height: 40px;
             width: 100%;
             background-color: blue;
@@ -33,20 +33,23 @@
             font-size: 25px;
         }
         #conteudos{
+            border: 1px solid white;
             width: 100%;
             margin-top: 20px;
             margin-left: 20px ;
-            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 25px;
         }
         .conteudo{
-            float: left;
+            padding: 10px;
             width: 250px;
-            height: 200px;
             border-radius: 5px;
             margin-bottom: 20px;
             margin-left:0%;
             margin-right: 20px;
-            background-color: rgb(46, 46, 46);
+            background-color: blue;
             color: white;
             font-family: sans-serif;
             padding: 5px;
@@ -86,12 +89,21 @@
             height: 30px;
         }
         #pensando{
+            border: 1px solid beige;
             margin: 20px;
+            padding: 15px;
         }
         #button-postar{
             position: relative;
             top: -13px;
             z-index: 1;
+        }
+        #seguir3{
+            height: 20px;
+            float: right;
+        }
+        #nome3{
+            float:left;
         }
     </style>
 </head>
@@ -105,17 +117,35 @@
     <div id="pensando" style="margin-top: 100px; margin-bottom: 40px;">
         <h2 style="color:white">No que você esta pensando?</h2>
         <textarea id="postar"></textarea><button id="button-postar" style="height: 36px;">Enviar</button>
-    </div> <hr>
+    </div>
     <div id="conteudos">
         <span style="margin-top: 0;" class="conteudo">
+            <span id="nome3">???</span><button id="seguir3">Curtir</button><button id="seguir3">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>??????????????????</span>
         </span>
-        <span  class="conteudo">
+        <span style="margin-top: 0;" class="conteudo">
+            <span id="nome3">???</span><button id="seguir3">Curtir</button><button id="seguir3">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>??????????????????</span>
         </span>
-        <span style="margin-bottom: 80px;" class="conteudo">
-            
+        <span style="margin-top: 0;" class="conteudo">
+            <span id="nome3">???</span><button id="seguir3">Curtir</button><button id="seguir3">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>??????????????????</span>
+        </span>
+        <span style="margin-top: 0;" class="conteudo">
+            <span id="nome3">???</span><button id="seguir3">Curtir</button><button id="seguir3">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>??????????????????</span>
+        </span>
+        <span style="margin-top: 0;" class="conteudo">
+            <span id="nome3">???</span><button id="seguir3">Curtir</button><button id="seguir3">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>??????</span>
         </span>
     </div>
-    <hr class="clear">
+    <p class="clear"></p>
     
 
     <div id="footer">
@@ -129,5 +159,19 @@
             <a id="irperfil" href="profile.html">Meu Perfil</a>
         </span>
     </div>
+    <script>
+        let largura = window.innerWidth;
+        let altura = window.innerHeight;
+        function ajustarLayout(){
+            let conteudos = document.getElementsByClassName('conteudo')
+            if (largura > 576){
+                for(let y = 0; y < conteudos.length ; y++){
+                    conteudos[y].style.background = 'blue';
+                }
+            }
+        }
+        window.addEventListener('load', ajustarLayout);
+        window.addEventListener('resize', ajustarLayout);
+    </script>
 </body>
 </html>

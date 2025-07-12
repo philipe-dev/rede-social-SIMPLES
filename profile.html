@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - HexaFeeds</title>
+    <script>
+        let inscritos = 1;
+        let tipos = ['Seguir', 'Deixar de Seguir'];
+        let tipo = 0;
+        function seguir(){
+            tipo += 1;
+            if(tipo === 1){
+                inscritos += 1;
+            }
+            if (tipo === 2){
+                tipo = 0;
+            }
+            document.getElementById('seguirHeader').textContent = tipos[tipo];
+        }
+        
+    </script>
+    <style>
+        body{
+            color: white;
+            background: black;
+            font-family: sans-serif;
+        }
+        #perfil{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(9, 97, 17);
+            border-radius: 75px;
+            margin: 20px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 150px;
+            font-size: 80px;
+        }
+        #nome{
+            display: inline-block;
+            margin: 20px;
+            font-size: 25px;
+            color: white;
+        }
+        header{
+            width: 100%;
+            background: rgb(73, 72, 72);
+            border-radius: 20px;
+        }
+        #seguidores{
+            color:white;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        #qtde_postagens{
+            color:white;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .postagem{
+            display: inline-block;
+            width: 300px;
+            height: 100px;
+            margin: 3px;
+            border-radius: 10px;
+            background-color: rgb(49, 48, 48);
+            padding: 10px;
+        }
+        #postagens{
+            margin: 18px;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .nome_postagem{
+            float: left;
+            font-size: 20px;
+        }
+        .seguir_postagem{
+            float: right;
+        }
+        .curtidas{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <a href="home.html"><button>Voltar</button></a>
+    <hr>
+    <header>
+        <div id="perfil"> ? </div>
+    </header>
+    <div id="nome">?</div> <button onclick="seguir()" id="seguirHeader">Seguir</button>
+    <div id="seguidores">? Inscritos</div>
+    <div id="qtde_postagens">? Postagens</div>
+    <div id="postagens">
+        <div class="postagem">
+            <span class="nome_postagem">???</span><button class="seguir_postagem">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>?????</span>
+            <hr>
+            <button onclick="seguir()">Curtir</button> <span class="curtidas">Curtidas: <span>0</span></span>
+        </div>
+        <div class="postagem">
+            <span class="nome_postagem">???</span><button class="seguir_postagem">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>Opa! Beleza, Mané?</span>
+            <hr>
+            <button onclick="seguir()">Curtir</button> <span class="curtidas">Curtidas: <span>0</span></span>
+        </div>
+        <div class="postagem">
+            <span class="nome_postagem">???</span><button class="seguir_postagem">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>Opa! Beleza, Mané?</span>
+            <hr>
+            <button onclick="seguir()">Curtir</button> <span class="curtidas">Curtidas: <span>0</span></span>
+        </div>
+        <div class="postagem">
+            <span class="nome_postagem">???</span><button class="seguir_postagem">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>Opa! Beleza, Mané?</span>
+            <hr>
+            <button onclick="seguir()">Curtir</button> <span class="curtidas">Curtidas: <span>0</span></span>
+        </div>
+        <div class="postagem">
+            <span class="nome_postagem">???</span><button class="seguir_postagem">Seguir</button>
+            <hr style="position: relative; top:5px; width:100%;">
+            <span>Opa! Beleza, Mané?</span>
+            <hr>
+            <button onclick="seguir()">Curtir</button> <span class="curtidas">Curtidas: <span>0</span></span>
+        </div>
+    </div>
+</body>
+</html>
